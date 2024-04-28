@@ -1,5 +1,3 @@
-# libpk project Bazel config
-
 # Show test error output. Override using --test_output={summary,full}.
 test --test_output=errors
 
