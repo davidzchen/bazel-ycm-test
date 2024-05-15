@@ -78,30 +78,30 @@ git_repository(
     remote = "https://github.com/erenon/bazel_clang_tidy.git",
 )
 
-github_archive(
-    name = "toolchains_llvm",
-    commit = "c5f221a3bdb7bcca9a3079eb032c9fa7333f52cc",
-    repo_name = "bazel-contrib/toolchains_llvm",
-)
+# github_archive(
+#     name = "toolchains_llvm",
+#     commit = "c5f221a3bdb7bcca9a3079eb032c9fa7333f52cc",
+#     repo_name = "bazel-contrib/toolchains_llvm",
+# )
 
-load("@toolchains_llvm//toolchain:deps.bzl", "bazel_toolchain_dependencies")
+# load("@toolchains_llvm//toolchain:deps.bzl", "bazel_toolchain_dependencies")
 
-bazel_toolchain_dependencies()
+# bazel_toolchain_dependencies()
 
-load("@toolchains_llvm//toolchain:rules.bzl", "llvm_toolchain")
+# load("@toolchains_llvm//toolchain:rules.bzl", "llvm_toolchain")
 
-llvm_toolchain(
-    name = "llvm_toolchain",
-    llvm_versions = {
-        "": "15.0.6",
-        "darwin-aarch64": "15.0.7",
-        "darwin-x86_64": "15.0.7",
-    },
-)
+# llvm_toolchain(
+#     name = "llvm_toolchain",
+#     llvm_versions = {
+#         "": "15.0.6",
+#         "darwin-aarch64": "15.0.7",
+#         "darwin-x86_64": "15.0.7",
+#     },
+# )
 
-load("@llvm_toolchain//:toolchains.bzl", "llvm_register_toolchains")
+# load("@llvm_toolchain//:toolchains.bzl", "llvm_register_toolchains")
 
-llvm_register_toolchains()
+# llvm_register_toolchains()
 
 # Hedron's Compile Commands Extractor for Bazel
 # https://github.com/hedronvision/bazel-compile-commands-extractor
